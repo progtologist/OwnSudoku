@@ -1,0 +1,81 @@
+#############################################################################
+##
+## OwnSudoku - Ein Starter für PocketBook Touch Lux 2s Sudoku Spiel
+##
+## Hiermit kann man eigene Sudoku Rätsel spielen
+##
+## erstellt 2015-02-22 OwnSudoku.von.Skeeve@xoxy.net
+##
+## Dies ist freie Software
+##
+## Anleitung überprüft von LucyOne aus dem allesebook.de Forum
+##
+#############################################################################
+
+Installation
+
+Das PocketBook mit dem Computer verbinden.
+
+Die Dateien OwnSudoku.app und SaveSudoku.app werden ins Verzeichnis "applications" des PocketBook kopiert. Eventuell ist dieses Verzeichnis versteckt.
+
+Das Verzeichnis Sudoku wird ins Hauptverzeichnis des PocketBook kopiert. Hier sind schon 4 Beispiel-Sudokus enthalten.
+
+Anschließend wird das PocketBook ausgeworfen.
+
+Im Anwendungsmenü des PocketBook nun die Anwendung "@Ownsudoku" starten. Nicht wundern, dass nichts zu passieren scheint. OwnSudoku hat sich nun richtig ins System installiert. Wenn man das Anwendungsmenü erneut aufruft, sollte "@Ownsudoku" verschwunden sein.
+
+Nun das PocketBook bitte komplett ausschalten und neu starten. Als Ergebnis sollten 4 neue "Bücher" mit Namen "Own Sudoku #0001 Level X" erscheinen.
+
+Durch Auswahl eines dieser "Bücher" wird das Sudoku geöffnet und man kann es lösen.
+
+
+Deinstallation
+
+Im Ordner "Sudoku" befindet sich eine Datei "UNINSTALL.sudoku". Wird dieses "Spiel" geöffnet, deinstalliert sich OwnSudoku ohne Sicherheitsabfrage! Ist die Datei nicht mehr vorhanden, kann sie neu erstellt werden. Der Inhalt ist am Ende dieses Textes wiedergegeben.
+
+Alternativ läßt sich OwnSudoku manuell deinstallieren. Dazu werden diese Dateien gelöscht:
+
+system/bin/OwnSudoku.app
+system/applications/SaveSudoku.app
+
+Aus der Datei system/config/extensions.cfg muß die Zeile, die mit "sudoku:" beginnt, entfernt werden.
+
+
+Bedienung
+
+Öffnen
+
+Die Sudokus werden wie Bücher im Dateisystem, vorzugsweise im Ordner "Sudoku", abgelegt. Sie werden wie ein Buch, einfach durch Auswahl geöffnet.
+
+Speichern
+
+Wenn man einen Spielstand sichern möchte, muß das Sudoku Programm beendet werden! Der Spielstand wird dann automatisch in der Sudoku Datei gespeichert. Bitte unbedingt beachten! Wird ein neues Spiel begonnen, OHNE vorher Sudoku zu beenden, kann der Spielstand nicht mehr gesichert werden!
+
+Generierte Spiele speichern
+
+Das Sudoku Programm des PocketBook kann auch eigene Spiele generieren. Normalerweise kann man solche Spiele nicht sichern, um sie Freunden zum Lösen zu geben oder um zwischendurch ein anderes Sudoku zu lösen. Hierzu kann man jetzt das Programm "@Savesudoku" verwenden. Es speichert das momentane Spiel im Verzeichnis "Sudoku" unter dem Namen "Sudoku JJJJ-MM-TT hh-mm-ss". Diese lassen sich dann jederzeit wieder neu starten.
+
+
+Eigene Sudokus erstellen
+
+Um ein Sudoku aus (z.B.) einer Zeitung mit dem PocketBook zu lösen, muß das Rätsel abgetippt werden. Dazu erstellt man eine einfach Textdatei. Achtung! Kein DOC, DOCX, RTF oder sonstiges. Eine einfache TXT ohne Formatierungen. Als Beispiel finden sich im Verzeichnis "Sudoku" 4 solcher Dateien. Wichtig ist, dass nicht die Endung ".txt" sondern ".sudoku" verwendet wird.
+
+Für jedes freie Feld des Sudokus wird ein "." eingegeben, ansonsten werden die gesetzten Ziffern verwendet. So entstehen also 9 Zeilen zu je 9 Zeichen:
+
+	24.....98
+	.........
+	..59.16..
+	.8.5.6.1.
+	7...3...5
+	.2.1.4.8.
+	..92.38..
+	.........
+	15.....46
+
+Diese Datei wird einfach auf das PocketBook übertragen. Wichtig noch einmal: Die Endung muß ".sudoku" sein, damit die Datei richtig erkannt wird.
+
+Wenn man diese spezielle "Sudoku" anlegt
+
+	987654321...
+
+es "UNINSTALL.sudoku" nennt und anschließend startet, wird OwnSudoku deinstalliert.
