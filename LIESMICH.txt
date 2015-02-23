@@ -1,4 +1,4 @@
-#############################################################################
+#############################################################:wrap=soft:#####
 ##
 ## OwnSudoku - Ein Starter für PocketBook Touch Lux 2s Sudoku Spiel
 ##
@@ -28,10 +28,12 @@ Nun das PocketBook bitte komplett ausschalten und neu starten. Als Ergebnis soll
 
 Durch Auswahl eines dieser "Bücher" wird das Sudoku geöffnet und man kann es lösen.
 
+Außerdem wird ein weiteres "Buch" mit Namen "New Sudoku" angezeigt. Mit diesem lassen sich eigene Sudokus direkt auf dem PocketBook eingeben.
+
 
 Deinstallation
 
-Im Ordner "Sudoku" befindet sich eine Datei "UNINSTALL.sudoku". Wird dieses "Spiel" geöffnet, deinstalliert sich OwnSudoku ohne Sicherheitsabfrage! Ist die Datei nicht mehr vorhanden, kann sie neu erstellt werden. Der Inhalt ist am Ende dieses Textes wiedergegeben.
+Am einfachsten läßt sich OwnSudoku deinstallieren, indem man ein neues Sudoku erstellt und hier in der ersten Zeile 987654321 eingibt. Sobald man dies eingegeben und das Sudoku Programm verlassen hat, wird OwnSudoku ohne weitere Rückfrage gelöscht.
 
 Alternativ läßt sich OwnSudoku manuell deinstallieren. Dazu werden diese Dateien gelöscht:
 
@@ -51,6 +53,7 @@ Speichern
 
 Wenn man einen Spielstand sichern möchte, muß das Sudoku Programm beendet werden! Der Spielstand wird dann automatisch in der Sudoku Datei gespeichert. Bitte unbedingt beachten! Wird ein neues Spiel begonnen, OHNE vorher Sudoku zu beenden, kann der Spielstand nicht mehr gesichert werden!
 
+
 Generierte Spiele speichern
 
 Das Sudoku Programm des PocketBook kann auch eigene Spiele generieren. Normalerweise kann man solche Spiele nicht sichern, um sie Freunden zum Lösen zu geben oder um zwischendurch ein anderes Sudoku zu lösen. Hierzu kann man jetzt das Programm "@Savesudoku" verwenden. Es speichert das momentane Spiel im Verzeichnis "Sudoku" unter dem Namen "Sudoku JJJJ-MM-TT hh-mm-ss". Diese lassen sich dann jederzeit wieder neu starten.
@@ -58,7 +61,9 @@ Das Sudoku Programm des PocketBook kann auch eigene Spiele generieren. Normalerw
 
 Eigene Sudokus erstellen
 
-Um ein Sudoku aus (z.B.) einer Zeitung mit dem PocketBook zu lösen, muß das Rätsel abgetippt werden. Dazu erstellt man eine einfach Textdatei. Achtung! Kein DOC, DOCX, RTF oder sonstiges. Eine einfache TXT ohne Formatierungen. Als Beispiel finden sich im Verzeichnis "Sudoku" 4 solcher Dateien. Wichtig ist, dass nicht die Endung ".txt" sondern ".sudoku" verwendet wird.
+Um ein Sudoku aus (z.B.) einer Zeitung mit dem PocketBook zu lösen, muß das Rätsel abgetippt werden. Hierzu gibt es zwei Möglichkeiten. Zum einen lassen sich Sudokus direkt im PocketBook eingeben. Dazu muß nur das "Buch" "New Sudoku" geöffnet werden. Es erscheint ein leeres Sudoku Feld. Die Zahlen werden wie gewohnt eingegeben. Wenn alle Zahlen eingegeben wurden, wird das Programm durch Antippen des "Haus"-Symbols verlassen. Das eingegebene Sudoku wird automatisch unter dem Namen "New Sudoku JJJJ-MM-TT hh-mm-ss" gespeichert und sofort zum Lösen geöffnet.
+
+Alternativ lassen sich auch Sudokus auf dem Computer erstellen und auf das PocketBook übertragen. Dazu erzeugt man eine einfach Textdatei. Achtung! Kein DOC, DOCX, RTF oder sonstiges. Eine einfache TXT ohne Formatierungen. Als Beispiel finden sich im Verzeichnis "Sudoku" 4 solcher Dateien. Wichtig ist, dass nicht die Endung ".txt" sondern ".sudoku" verwendet wird.
 
 Für jedes freie Feld des Sudokus wird ein "." eingegeben, ansonsten werden die gesetzten Ziffern verwendet. So entstehen also 9 Zeilen zu je 9 Zeichen:
 
@@ -74,8 +79,15 @@ Für jedes freie Feld des Sudokus wird ein "." eingegeben, ansonsten werden die 
 
 Diese Datei wird einfach auf das PocketBook übertragen. Wichtig noch einmal: Die Endung muß ".sudoku" sein, damit die Datei richtig erkannt wird.
 
-Wenn man diese spezielle "Sudoku" anlegt
 
-	987654321...
+Tipps & Tricks
 
-es "UNINSTALL.sudoku" nennt und anschließend startet, wird OwnSudoku deinstalliert.
+Wenn der Name "New Sudoku" für neue Sudokus nicht gefällt, kann man die Datei auch einfach umbenennen in (z.B.) "Mein Sudoku". Neue Sudokus werden dann als "Mein Sudoku JJJJ-MM-TT hh-mm-ss" gespeichert.
+
+Tippt man öfter Sudokus aus denselben Zeitschriften ab, kann es nützlich sein, sich für jede Zeitschrift eine Kopie von "New Sudoku" anzulegen, damit die Namen passen. Ich z.B. löse gerne die two schwierigsten Sudokus aus dem Stern. Wenn ich mir ein "Stern Kamikaze" und eine "Stern Sumo" anlege, kann ich ganz einfach die Rätsel abtippen und automatisch unter einem Namen wie "Stern Kamikaze 2015-02-23 13-14-15" ablegen.
+
+Wenn die Datei "New Sudoku" versehentlich gelöscht wurde, reicht es, auf dem Computer ein neues Sudoku mit leeren Feldern anzulegen und auf das PocketBook zu übertragen.
+
+Spielstände werden automatisch gespeichert wenn man das Sudoku Programm verläßt. Sollte man das einmal nicht wollen, kann man einfach über das Menü ein neues Spiel generieren lassen und das Programm erst dann verlassen.
+
+WICHTIG: Es ist leider nicht möglich, gelöste Sudokus zu speichern. Das Programm löscht leider den Spielstand sofort, sobald das Rätsel gelöst wurde. Darum empfiehlt es sich, das Spiel vor dem lösen des letzten Feldes einmal zu verlassen. Damit wird der gesamte Fortschritt gespeichert.

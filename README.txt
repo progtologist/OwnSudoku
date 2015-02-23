@@ -1,4 +1,4 @@
-#############################################################################
+#############################################################:wrap=soft:#####
 ##
 ## OwnSudoku - A launcher for PocketBook Touch Lux 2's sudoku game
 ##
@@ -28,10 +28,12 @@ Now switch off the PocketBook and restart it. As a result you should now see  4 
 
 By selecting one of the "Books" the contained Sudoku will be opened and you can start solving it.
 
+Additionally there will be another "Book" called "New Sudoku". You will use this one to enter Sudokus directly on the PocketBook.
+
 
 Deinstallation
 
-In the folder "Sudoku" you will find a file "UNINSTALL.sudoku". When you open this "Game", OwnSudoku wil uninstall itself without any security prompt! Should the file be missing, it can be recreated. The file's content is listed at the end of this text.
+The easiest way to deinstall OwnSudoku is, to create a new Sudoku and entering 987654321 in the first line. As soon as you leave the Sudoku application, OwnSudoku is deleted without any confirmation question.
 
 As an alternative this is how to deinstall manually. Delete these files:
 
@@ -58,7 +60,9 @@ The PocketBook's Sudoku programm can generate puzzles. It's not possible to save
 
 Creating your own Sudokus
 
-To solve a Sudoku from (e.g.) a newspaper, you have to type it in. For this, you need to create a text file. Please note: No DOC, DOCX, RTF or something alike. Just a pure TXT without any formatting. You can find 4 sample puzzles in the directory "Sudoku". It's important to use the extension ".sudoku" and not ".txt".
+To solve a Sudoku from (e.g.) a newspaper, you have to type it in. There are two ways to do this. You can type in a Sudoku directly on your PocketBook. For this, you need to open the "Book" "New Sudoku". A blank Sudoku grid will be displayed. You can enter the numbers as usual. When all numbers are placed, leave the application by tapping on the "home"-symbol. The Sudoku entered will automatically be saved as "New Sudoku YYYY-MM-DD hh-mm-ss" and opened again to be solved.
+
+As an alternative you can create Sudokus on your computer and transfer them to the PocketBook. For this you need to create a text file. Please note: No DOC, DOCX, RTF or something alike. Just a pure TXT without any formatting. You can find 4 sample puzzles in the directory "Sudoku". It's important to use the extension ".sudoku" and not ".txt".
 
 Each empty field of the Sudoku is represented by a ".". For the given numbers just use the digit. This will give you 9 lines with 9 characters:
 
@@ -74,8 +78,13 @@ Each empty field of the Sudoku is represented by a ".". For the given numbers ju
 
 This file has to be copied to the PocketBook. Once more: It's important that the file has the extension ".sudoku" to be regognized properly.
 
-When you create this special "Sudoku"
 
-	987654321...
+Tipps & Tricks
 
-call it "UNINSTALL.sudoku" and start it, OwnSudoku will be deinstalled.
+If you do not like the name "New Sudoku" for new Sudokus, you can simply rename the file in (e.g.) "My Sudoku". New Sudokus will then be stored as "My Sudoku YYYY-MM-DD hh-mm-ss".
+
+If you regularly type in Sudokus from the same newspapers, it might be handy to have one copy of "New Sudoku" for every newspaper, to have an appropriate name. As an example: I like to solve the two most difficult Sudokus from the german magazin Stern. When I create a "Stern Kamikaze" and one "Stern Sumo", I can easily type in one of the puzzles and have it automatically saved under a name like "Stern Kamikaze 2015-02-23 13-14-15".
+
+Games will automatically be saved when you leave the Sudoku application. Should you not want this, you simply need to let the application generate a new puzzle, using the menu before you leave the application.
+
+IMPORTANT: Unfortunately it is impossible to save a solved Sudoku. The application deletes the save files as soon as the puzzle is solved. As a workaround, one should simply leave the application once before setting the last number. This will save the current progress.

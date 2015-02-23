@@ -12,6 +12,10 @@
 #############################################################################
 if [ -n "$1" ] ; then
 
+# Some magic numbers
+UNINSTALL="6c917e2a81d8a4cb1097da8365b65a5e  -"
+MTSUDOKU="504167cdc5d6d4309afc3373e8ec7366  -"
+
 # switch to state directory
 cd /mnt/ext1/system/state/ebrmain/bin/ || exit 1
 
@@ -22,34 +26,7 @@ if ! tar tzf "$1" sudoku.app.af0 ; then
 	# Check the length
 	len=$( echo $sudoku | wc -c )
 	# Maybe UNINSTALL if not eactly 81 places (plus 81 spaces)
-	if [ $len -ne 162 ] ; then
-		# Is it a "DELETEME"?
-		if [ "$sudoku" == "9 8 7 6 5 4 3 2 1 . . . " ] ; then
-			# Does the name match?
-			if [ $( basename "$1" ) == "UNINSTALL.sudoku" ] ; then
-				# remove the app
-				rm -f "$0"
-				# remove the UNINSTALL.sudoku
-				rm -f "$1"
-				# remove the SaveSudoku app
-				cd /mnt/ext1/applications && rm -f "SaveSudoku.app"
-				# fix the extensions
-				cd /mnt/ext1/system/config || exit 1
-				# create a backup file
-				cp extensions.cfg extensions.bck || exit 1
-				# old extensions.cfg without the sudoku line
-				grep -v '^sudoku:' extensions.bck > extensions.cfg
-				# remove the backup
-				rm extensions.bck
-				# is the extensions file empty?
-				if [ $( wc -l < extensions.cfg ) -eq 0 ] ; then
-					rm extensions.cfg
-				fi
-				exit 0
-			fi
-		fi
-		exit 1
-	fi
+	[ $len -eq 162 ] || exit 1
 	# Count the given numbers
 	cnt=$( echo $sudoku | tr -Cd 123456789 | wc -c )
 	# Convert it to hex
@@ -87,10 +64,32 @@ end=$( dd bs=3896 skip=2 if=sudoku.app.af0 | md5sum )
 if [ "$strt" == "$end" ] ; then
 	tar czf "$1" sudoku.app.af0 sudoku.app.afl
 	# was it an empty game?
-	mtgame="504167cdc5d6d4309afc3373e8ec7366  -"
-	if [ "$strt" == "$mtgame" ] ; then
+	if [ "$strt" == "$MTSUDOKU" ] ; then
+		# Check what was entered
+		editor=$( dd bs=3896 count=1 if=sudoku.app.af0 | md5sum )
 		# Nothing entered?
-		[ $( dd bs=3896 count=1 if=sudoku.app.af0 | md5sum ) == "$mtgame" ] && exit 0
+		[ "$editor" == "$MTSUDOKU" ] && exit 0
+		if [ "$editor" == "$UNINSTALL" ] ; then
+			# remove the app
+			rm -f "$0"
+			# remove the New Sudoku.sudoku
+			rm -f "$1"
+			# remove the SaveSudoku app
+			cd /mnt/ext1/applications && rm -f "SaveSudoku.app"
+			# fix the extensions
+			cd /mnt/ext1/system/config || exit 1
+			# create a backup file
+			cp extensions.cfg extensions.bck || exit 1
+			# old extensions.cfg without the sudoku line
+			grep -v '^sudoku:' extensions.bck > extensions.cfg
+			# remove the backup
+			rm extensions.bck
+			# is the extensions file empty?
+			if [ $( wc -l < extensions.cfg ) -eq 0 ] ; then
+				rm extensions.cfg
+			fi
+			exit 0
+		fi
 		# Timestamp
 		ts=$( date "+%Y-%m-%d %H-%M-%S" )
 		# Get the folder
