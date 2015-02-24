@@ -87,4 +87,4 @@ If you regularly type in Sudokus from the same newspapers, it might be handy to 
 
 Games will automatically be saved when you leave the Sudoku application. Should you not want this, you simply need to let the application generate a new puzzle, using the menu before you leave the application.
 
-IMPORTANT: Unfortunately it is impossible to save a solved Sudoku. The application deletes the save files as soon as the puzzle is solved. As a workaround, one should simply leave the application once before setting the last number. This will save the current progress.
+IMPORTANT: Unfortunately it is impossible to save a solved Sudoku. The application deletes the save files as soon as the puzzle is solved and the application left. As a workaround, one should simply undo the last move after solving and leave the application. This will save the current progress, except for the last step.

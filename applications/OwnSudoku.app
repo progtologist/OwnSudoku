@@ -100,6 +100,8 @@ if [ "$strt" == "$end" ] ; then
 		dd bs=3888 count=1 if=sudoku.app.af0 | hexdump -ve '1/1 "%x" 47/1 ""' | sed -e 's/\(.........\)/\1\n/g;y/0/./' > "$sudoku"
 		exec "$0" "$sudoku"
 	fi
+	# Remove the status. It was saved in the game file
+	rm -f sudoku.app.af0 sudoku.app.afl
 fi
 
 else # Installation

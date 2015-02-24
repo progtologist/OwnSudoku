@@ -90,4 +90,4 @@ Wenn die Datei "New Sudoku" versehentlich gelöscht wurde, reicht es, auf dem Co
 
 Spielstände werden automatisch gespeichert wenn man das Sudoku Programm verläßt. Sollte man das einmal nicht wollen, kann man einfach über das Menü ein neues Spiel generieren lassen und das Programm erst dann verlassen.
 
-WICHTIG: Es ist leider nicht möglich, gelöste Sudokus zu speichern. Das Programm löscht leider den Spielstand sofort, sobald das Rätsel gelöst wurde. Darum empfiehlt es sich, das Spiel vor dem lösen des letzten Feldes einmal zu verlassen. Damit wird der gesamte Fortschritt gespeichert.
+WICHTIG: Es ist leider nicht möglich, gelöste Sudokus zu speichern. Das Programm löscht den Spielstand sofort, sobald das Rätsel gelöst und verlassen wurde. Darum empfiehlt es sich, nach dem Lösen des Spiels den letzten Zug zurück zu nehmen, bevor das Programm verlassen wird. Damit wird der gesamte Fortschritt, bis auf den letzten Schritt, gespeichert.
