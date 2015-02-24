@@ -31,18 +31,6 @@ By selecting one of the "Books" the contained Sudoku will be opened and you can 
 Additionally there will be another "Book" called "New Sudoku". You will use this one to enter Sudokus directly on the PocketBook.
 
 
-Deinstallation
-
-The easiest way to deinstall OwnSudoku is to create a new Sudoku and enter 987654321 in the first line. As soon as you leave the Sudoku application, OwnSudoku is deleted without any confirmation question.
-
-As an alternative, you can deinstall it manually. Delete these files:
-
-system/bin/OwnSudoku.app
-system/applications/SaveSudoku.app
-
-From the file system/config/extensions.cfg remove the line starting with "sudoku:".
-
-
 Usage
 
 Opening
@@ -77,6 +65,18 @@ Each empty field of the Sudoku is represented by a ".". For the given numbers ju
 	15.....46
 
 This file has to be copied to the PocketBook. Once more: It's important that the file has the extension ".sudoku" to be regognized properly.
+
+
+Deinstallation
+
+The easiest way to deinstall OwnSudoku is to create a new Sudoku and enter 987654321 in the first line. As soon as you leave the Sudoku application, OwnSudoku is deleted without any confirmation question.
+
+As an alternative, you can deinstall it manually. Delete these files:
+
+system/bin/OwnSudoku.app
+system/applications/SaveSudoku.app
+
+From the file system/config/extensions.cfg remove the line starting with "sudoku:".
 
 
 Further hints and tips
